@@ -1,0 +1,27 @@
+<div *ngIf="!addActive" >
+  <div class="drawer" (click)="showAdd()">
+    <div>My Brands</div>
+    <div class="drawer__action-icon">
+      <i class="fa fa-lg fa-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="addActive" >
+  <div class="drawer" (click)="hideAdd()">
+    <div>Add A Brand</div>
+    <div class="drawer__action-icon">
+      <i class="fa fa-lg fa-times" aria-hidden="true"></i>
+    </div>
+  </div>
+  <app-add-brand (addExport)="addBrand($event)" (closeAdd)="hideAdd($event)"></app-add-brand>
+</div>
+
+<div class="my-brands-wrapper" (deleteExport)="refreshBrands()">
+  <div class="brand-wrapper" *ngFor="let brand of brands">
+
+    <app-brand [brand]="brand" (deleteExport)="deleteBrand($event)"></app-brand>
+
+  </div>
+
+</div>

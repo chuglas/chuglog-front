@@ -1,0 +1,25 @@
+<div class="flex">
+
+  <div class="col--style-list">
+
+    <app-add-style (addStyleOutput)="add($event)"></app-add-style>
+
+    <div class="my-styles-wrapper">
+      <a [routerLink]="['/mystyles', style.apiId]" class="beer-style-wrapper" [ngClass]="style.color" *ngFor="let style of styles"> {{style.apiId}} {{ style.name }}</a>
+    </div>
+
+  </div>
+
+  <div class="col--style-details">
+    <app-style-details ></app-style-details>
+  </div>
+
+  <div class="col--my-brands">
+    <app-my-brands ></app-my-brands>
+  </div>
+
+  <div class="col--my-pairings">
+    <app-my-pairings ></app-my-pairings>
+  </div>
+
+</div>

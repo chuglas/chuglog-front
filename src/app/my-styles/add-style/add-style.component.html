@@ -1,0 +1,28 @@
+<div class="drawer--add-style">
+
+  <div *ngIf="!addActive" >
+    <div class="drawer drawer-margin" (click)="showAdd()">
+      <div>My Styles</div>
+      <div class="drawer__action-icon">ADD</div>
+    </div>
+  </div>
+
+  <div *ngIf="addActive" >
+    <div class="drawer drawer-margin" (click)="hideAdd()">
+      <div>Add A Style</div>
+      <div class="drawer__action-icon">CLOSE</div>
+    </div>
+    <div class="drawer">
+      <form method="POST" class="form--add-style">
+        <div class="form-group">
+          <div class="select-triangle"></div>
+          <select name="beerStyle" [(ngModel)]="newStyle">
+            <option *ngFor="let apiStyle of apiStyles" [ngValue]="apiStyle">{{apiStyle.id}} {{apiStyle.shortName}}</option>
+          </select>
+        </div>
+        <button class="btn--add" (click)="submit()">Add Style</button>
+      </form>
+    </div>
+  </div>
+
+</div>

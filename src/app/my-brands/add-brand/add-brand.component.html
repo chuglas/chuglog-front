@@ -1,0 +1,47 @@
+<div class="drawer">
+
+    <input type="text" [(ngModel)]="newBrand.name" name="name" required placeholder="Beer Name"/>
+
+    <input type="text" [(ngModel)]="newBrand.breweryName" name="brewery" placeholder="Brewery Name" required />
+
+    <input type="text" [(ngModel)]="newBrand.tastingNotes" name="tastingNotes" placeholder="Tasting Notes"/>
+
+    <label class="text--small"> Rating </label>
+
+    <section class="rating">
+      <!-- 10th STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_10" name="rateBrand" value="10" />
+      <label for="star_10" title="Ten">
+        <i class="fa fa-lg fa-star" aria-hidden="true"></i>
+      </label>
+      <!-- 9TH STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_9" name="rateBrand" value="9" />
+      <label for="star_9" title="Nine"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 8TH STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_8" name="rateBrand" value="8" />
+      <label for="star_8" title="Eight"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 7TH STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_7" name="rateBrand" value="7" />
+      <label for="star_7" title="Seven"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 6TH STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_6" name="rateBrand" value="6" />
+      <label for="star_6" title="Six"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- FIFTH STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_5" name="rateBrand" value="5" />
+      <label for="star_5" title="Five"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- FOURTH STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_4" name="rateBrand" value="4" />
+      <label for="star_4" title="Four"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- THIRD STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_3" name="rateBrand" value="3" />
+      <label for="star_3" title="Three"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- SECOND STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_2" name="rateBrand" value="2" />
+      <label for="star_2" title="Two"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- FIRST STAR -->
+      <input type="radio" [(ngModel)]="newBrand.rating" id="star_1" name="rateBrand" value="1" />
+      <label for="star_1" title="One"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+
+    </section>
+  <button class="btn--add" (click)="submit()"> Add Brand </button>
+</div>

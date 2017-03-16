@@ -1,1 +1,380 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+h1.big {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 20vw;
+  transform: rotate(-10deg);
+  color: white;
+}
+
+.homepage {
+  background: #FFCA5A;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+#mainContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+body {
+  margin: 0;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.nav {
+  padding: 10px;
+  background: Silver;
+  color: WhiteSmoke;
+}
+
+.nav-logo {
+  font-family: 'Pacifico', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.col--style-list,
+.col--style-details,
+.col--my-brands,
+.col--my-pairings {
+  width: 25%;
+  background: WhiteSmoke;
+  transition: 200ms ease;
+}
+
+.expanded-info .col--style-details {
+  width: 75%;
+}
+
+.expanded-info .col--my-brands {
+  width: 0;
+  padding: 0;
+}
+
+.expanded-info .col--my-pairings {
+  width: 0;
+  padding: 0;
+}
+
+
+
+.my-styles-wrapper {
+  max-height: calc(100vh - 87px);
+  overflow: scroll
+}
+
+.col--my-pairings {
+  background-color: WhiteSmoke;
+  padding: 10px;
+}
+
+.col--my-brands {
+  background-color: WhiteSmoke;
+  padding: 10px;
+}
+
+.my-brands-wrapper {
+  height: calc(100vh - 87px);
+  overflow: scroll;
+}
+
+.brand-wrapper {
+  color: Silver;
+  background-color: white;
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.brand-wrapper input {
+  background: WhiteSmoke;
+  color: Silver;
+}
+
+.brand-wrapper button {
+  width: 32%;
+  padding: 5px;
+  border: none;
+  border-radius: 0;
+  margin: 10px 0 0 0;
+  background: WhiteSmoke;
+  cursor: pointer;
+}
+
+.drawer {
+  width: 100%;
+  padding: 10px;
+  background: Silver;
+  color: WhiteSmoke;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drawer__action-icon {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+
+
+.drawer input {
+  background: WhiteSmoke;
+  color: SlateGray;
+}
+
+.drawer--add-style {
+  margin: 10px;
+}
+
+.brand-details {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.brand-details-lower {
+  margin-bottom: 10px;
+}
+
+.brand-edit {
+  margin-left: auto;
+}
+
+.rating-circle-display {
+  background-color: Silver;
+  color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.rating-container {
+  margin: 10px 0;
+}
+
+.rating-container i {
+  margin-right: 2px;
+}
+
+input {
+  width: 100%;
+}
+
+.text--small {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin: 5px 5px 5px 0;
+
+}
+.color1 { background: #FFE699 }
+.color2 { background: #FFD878 }
+.color3 { background:  #FFCA5A}
+.color4 { background:  #FFBF42}
+.color5 { background: #FBB123 }
+.color6 { background: #F8A600 }
+.color7 { background: #F39C00 }
+.color8 { background: #EA8F00 }
+.color9 { background: #E58500 }
+.color10 { background: #DE7C00 }
+.color11 { background: #D77200 }
+.color12 { background: #CF6900 }
+.color13 { background: #CB6200 }
+.color14 { background: #C35900 }
+.color15 { background: #BB5100 }
+.color16 { background: #B54C00 }
+.color17 { background: #B04500 }
+.color18 { background: #A63E00 }
+.color19 { background: #A13700 }
+.color20 { background: #9B3200 }
+.color21 { background: #952D00 }
+.color22 { background: #8E2900 }
+.color23 { background: #882300 }
+.color24 { background: #821E00 }
+.color25 { background: #7B1A00 }
+.color26 { background: #771900 }
+.color27 { background: #701400 }
+.color28 { background: #6A0E00 }
+.color29 { background: #660D00 }
+.color30 { background: #5E0B00 }
+.color31 { background: #5A0A02 }
+.color32 { background: #560A05 }
+.color33 { background: #520907 }
+.color34 { background: #4C0505 }
+.color35 { background: #470606 }
+.color36 { background: #440607 }
+.color37 { background: #3F0708 }
+.color38 { background: #3B0607 }
+.color39 { background: #3A070B }
+.color40 { background: #36080A }
+.colorundefined { background: Silver }
+
+
+.drawer input {
+  border: none;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.update-input {
+  border: none;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* - - - - - RATINGS */
+
+.rating:not(:checked) > input {
+  display: none;
+}
+
+/* - - - - - RATE */
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.rating:not(:checked) > label {
+  cursor:pointer;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  display: inline-block;
+  color: WhiteSmoke;
+  line-height: 22px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: SlateGray;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: SlateGray;
+}
+.rating > input:checked ~ label {
+  color: SlateGray;
+}
+
+.fa-cutlery {
+  color: Silver;
+  margin-left: 10px;
+  transition: 200ms;
+}
+
+.fa-cutlery:hover {
+  color: SlateGray;
+}
+
+.fa-pencil {
+  color: WhiteSmoke;
+  transition: 200ms;
+}
+
+.fa-pencil:hover {
+  color: Silver
+}
+
+.rating i:hover {
+  color: SlateGray;
+}
+
+.recipe-link {
+  color: inherit;
+}
+
+.edit-form {
+  background: WhiteSmoke;
+  padding: 10px;
+}
+
+.edit-form input {
+  background: white;
+}
+
+.edit-form button {
+  background: white;
+}
+
+.btn--add {
+  width: 100%;
+  padding: 5px;
+  background: white;
+  border: none;
+  color: slategray;
+}
+
+.form--add-style {
+  width: 100%;
+  position: relative;
+}
+
+.form--add-style select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: white;
+  margin-bottom: 10px;
+  border-radius: 0;
+  height: 25px;
+  color: black;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  cursor: pointer;
+}
+
+.select-triangle {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: Silver transparent transparent transparent;
+  pointer-events: none;
+
+}

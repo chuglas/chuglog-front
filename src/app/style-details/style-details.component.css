@@ -1,0 +1,10 @@
+.beer-details {
+  padding: 10px;
+  color: white;
+  height: calc(100vh - 87px);
+  overflow: scroll
+}
+
+.beer-details-inner {
+  padding: 10px;
+}

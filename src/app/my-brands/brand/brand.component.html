@@ -1,0 +1,79 @@
+
+<div class="brand-details">
+  <div>{{brand.name}}  |  {{ brand.breweryName }}</div>
+  <div *ngIf="!editActive" class="brand-edit" (click)="showEdit()">
+    <i class="fa fa-lg fa-pencil" aria-hidden="true"></i>
+  </div>
+  <div *ngIf="editActive" class="brand-edit" (click)="hideEdit()">
+    <i class="fa fa-lg fa-times" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="brand-details-lower">
+
+  <div class="rating-container" [ngSwitch]="brand.rating">
+    <div *ngSwitchCase="1"> <i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="2"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="3"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="4"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="5"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="6"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="7"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="8"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="9"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchCase="10"> <i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i><i class="fa fa-lg fa-star" aria-hidden="true"></i> </div>
+    <div *ngSwitchDefault> Value is something else </div>
+  </div>
+
+  <div>{{ brand.tastingNotes }}</div>
+</div>
+
+<div *ngIf="editActive">
+
+  <form class="edit-form">
+
+      <input type="text" class="update-input" [(ngModel)]="brand.name" name="name" [placeholder]="brand.name" required/>
+      <input type="text" class="update-input" [(ngModel)]="brand.breweryName" name="brewery" [placeholder]="brand.breweryName" required />
+      <input type="text" class="update-input" [(ngModel)]="brand.tastingNotes" name="tastingNotes" [placeholder]="brand.tastingNotes"/>
+
+      <label class="text--small"> Rating </label>
+
+      <section class="rating">
+        <!-- 10th STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_10" name="rate" value="10" />
+        <label class="rating-circle" for="edit_star_10" title="Ten"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- 9TH STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_9" name="rate" value="9" />
+        <label class="rating-circle" for="edit_star_9" title="Nine"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- 8TH STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_8" name="rate" value="8" />
+        <label class="rating-circle" for="edit_star_8" title="Eight"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- 7TH STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_7" name="rate" value="7" />
+        <label class="rating-circle" for="edit_star_7" title="Seven"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- 6TH STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_6" name="rate" value="6" />
+        <label class="rating-circle" for="edit_star_6" title="Six"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- FIFTH STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_5" name="rate" value="5" />
+        <label class="rating-circle" for="edit_star_5" title="Five"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- FOURTH STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_4" name="rate" value="4" />
+        <label class="rating-circle" for="edit_star_4" title="Four"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- THIRD STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_3" name="rate" value="3" />
+        <label class="rating-circle" for="edit_star_3" title="Three"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- SECOND STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_2" name="rate" value="2" />
+        <label class="rating-circle" for="edit_star_2" title="Two"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+        <!-- FIRST STAR -->
+        <input type="radio" [(ngModel)]="brand.rating" id="edit_star_1" name="rate" value="1" />
+        <label class="rating-circle" for="edit_star_1" title="One"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+
+      </section>
+    <button (click)="update()"> Update </button>
+    <button (click)="hideEdit()"> Cancel </button>
+    <button (click)="deleteBrandButton()"> Delete </button>
+
+
+  </form>
+</div>

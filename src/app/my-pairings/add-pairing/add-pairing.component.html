@@ -1,0 +1,45 @@
+<div class="drawer">
+
+    <input type="text" [(ngModel)]="newPairing.name" name="name" required placeholder="Dish / Food Name"/>
+
+    <input type="text" [(ngModel)]="newPairing.recipeLink" name="brewery" placeholder="Recipe Link" required />
+
+    <input type="text" [(ngModel)]="newPairing.tastingNotes" name="tastingNotes" placeholder="Tasting Notes"/>
+
+    <label class="text--small"> Rating </label>
+
+    <section class="rating">
+      <!-- 10th STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_10" name="rate" value="10" />
+      <label class="rating-circle" for="addPairingStar_10" title="Ten"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 9TH STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_9" name="rate" value="9" />
+      <label class="rating-circle" for="addPairingStar_9" title="Nine"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 8TH STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_8" name="rate" value="8" />
+      <label class="rating-circle" for="addPairingStar_8" title="Eight"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 7TH STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_7" name="rate" value="7" />
+      <label class="rating-circle" for="addPairingStar_7" title="Seven"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- 6TH STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_6" name="rate" value="6" />
+      <label class="rating-circle" for="addPairingStar_6" title="Six"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- FIFTH STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_5" name="rate" value="5" />
+      <label class="rating-circle" for="addPairingStar_5" title="Five"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- FOURTH STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_4" name="rate" value="4" />
+      <label class="rating-circle" for="addPairingStar_4" title="Four"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- THIRD STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_3" name="rate" value="3" />
+      <label class="rating-circle" for="addPairingStar_3" title="Three"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- SECOND STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_2" name="rate" value="2" />
+      <label class="rating-circle" for="addPairingStar_2" title="Two"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+      <!-- FIRST STAR -->
+      <input type="radio" [(ngModel)]="newPairing.rating" id="addPairingStar_1" name="rate" value="1" />
+      <label class="rating-circle" for="addPairingStar_1" title="One"><i class="fa fa-lg fa-star" aria-hidden="true"></i></label>
+
+    </section>
+  <button class="btn--add" (click)="submit()"> Add Pairing </button>
+</div>

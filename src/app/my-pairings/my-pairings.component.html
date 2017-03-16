@@ -1,0 +1,22 @@
+<div *ngIf="!addActive" >
+  <div class="drawer" (click)="showAdd()">
+    <div>My Pairings</div>
+    <div class="drawer__action-icon">
+      <i class="fa fa-lg fa-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="addActive" >
+  <div class="drawer" (click)="hideAdd()">
+    <div>Add A Pairing</div>
+    <div class="drawer__action-icon"><i class="fa fa-lg fa-times" aria-hidden="true"></i></div>
+  </div>
+  <app-add-pairing (addExport)="addPairing($event)" (closeAdd)="hideAdd($event)"></app-add-pairing>
+</div>
+
+<div class="my-brands-wrapper" (deleteExport)="refreshPairings()">
+  <div class="brand-wrapper" *ngFor="let pairing of pairings">
+    <app-pairing [pairing]="pairing" (deleteExport)="deletePairing($event)"></app-pairing>
+  </div>
+</div>

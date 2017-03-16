@@ -1,0 +1,13 @@
+<div class="drawer--add-style">
+  <div class="drawer drawer-margin" (click)="expandDetails()">
+    <div>Style Info</div>
+    <div class="drawer__action-icon"> > </div>
+  </div>
+</div>
+
+<div [ngClass]="style.color" class="beer-details" *ngIf="style" [ngClass]="{'expanded-view': expandedView }">
+  <div class="beer-details-inner">
+    <h1>{{style.name}}</h1>
+    <p>{{style.description}}</p>
+  </div>
+</div>
