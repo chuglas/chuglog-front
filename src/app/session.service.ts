@@ -13,8 +13,8 @@ export class SessionService implements CanActivate {
   public user: any;
   isAuth: EventEmitter<any> = new EventEmitter();
 
-	// BASE_URL: string = 'http://localhost:3000';
-  BASE_URL: string = 'https://chuglog.herokuapp.com';
+	BASE_URL: string = 'http://localhost:3000';
+  // BASE_URL: string = 'https://chuglog.herokuapp.com';
 
 
   constructor(

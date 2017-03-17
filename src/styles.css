@@ -16,6 +16,7 @@ h1.big {
   font-size: 20vw;
   transform: rotate(-10deg);
   color: white;
+  margin: 0;
 }
 
 .homepage {
@@ -49,14 +50,22 @@ button {
   cursor: pointer;
 }
 
+textarea, input, button { outline: none; }
+
+
 .nav {
   padding: 10px;
   background: Silver;
   color: WhiteSmoke;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo {
   font-family: 'Pacifico', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  transform: rotate(-10deg);
 }
 
 .flex {
@@ -139,6 +148,7 @@ button {
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .drawer__action-icon {
@@ -151,6 +161,18 @@ button {
 .drawer input {
   background: WhiteSmoke;
   color: SlateGray;
+  border: none;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.drawer textarea {
+  background: WhiteSmoke;
+  color: SlateGray;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .drawer--add-style {
@@ -243,12 +265,6 @@ input {
 .color40 { background: #36080A }
 .colorundefined { background: Silver }
 
-
-.drawer input {
-  border: none;
-  padding: 5px;
-  margin-bottom: 5px;
-}
 
 .update-input {
   border: none;
@@ -355,9 +371,10 @@ input {
   outline: none;
   background: white;
   margin-bottom: 10px;
+  padding: 5px;
   border-radius: 0;
   height: 25px;
-  color: black;
+  color: SlateGray;
 }
 
 select {
@@ -377,4 +394,81 @@ select {
   border-color: Silver transparent transparent transparent;
   pointer-events: none;
 
+}
+
+.login-title {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  width: 30%;
+  padding: 5%;
+}
+
+.login-form {
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.login-input {
+  height: 50px;
+  width: 300px;
+  border: none;
+  background-color: white;
+  font-size: 30px;
+  padding: 20px;
+  margin-right: 20px;
+  color: Silver;
+}
+
+@media screen and (max-width: 768px) {
+  .login-input {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .login-title {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .login-title svg {
+    width: 200px;
+  }
+}
+
+.btn--login {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: #FFCA5A;
+  font-family: 'Pacifico';
+  font-size: 32px;
+  padding: 19px;
+  transition: 200ms;
+}
+
+.btn--login:hover {
+  transform: rotate(-20deg);
+}
+
+.nav-right {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.nav-username {
+  text-transform: uppercase;
+}
+
+.nav-logout {
+  text-transform: uppercase;
 }

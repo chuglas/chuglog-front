@@ -9,8 +9,9 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class BrandFinderService {
 
-  // BASE_URL: string = 'http://localhost:3000';
-  BASE_URL: string = 'https://chuglog.herokuapp.com';
+  BASE_URL: string = 'http://localhost:3000';
+  // BASE_URL: string = 'https://chuglog.herokuapp.com';
+
 
   constructor(
     private http: Http,

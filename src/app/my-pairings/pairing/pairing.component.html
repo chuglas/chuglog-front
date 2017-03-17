@@ -34,9 +34,9 @@
 
       <input type="text" class="update-input" [(ngModel)]="pairing.name" name="name" [placeholder]="pairing.name" required/>
 
-      <input type="text" class="update-input" value="pairing.recipeLink" name="brewery" [placeholder]="pairing.recipeLink" required />
+      <input type="text" class="update-input" [(ngModel)]="pairing.recipeLink" name="brewery" [placeholder]="pairing.recipeLink" required />
 
-      <input type="text" class="update-input" value="pairing.tastingNotes" name="tastingNotes" [placeholder]="pairing.tastingNotes"/>
+      <input type="text" class="update-input" [(ngModel)]="pairing.tastingNotes" name="tastingNotes" [placeholder]="pairing.tastingNotes"/>
 
       <label class="text--small"> Rating </label>
 
