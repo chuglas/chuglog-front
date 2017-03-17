@@ -9,7 +9,9 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class StyleFinderService {
-  BASE_URL: string = 'http://localhost:3000';
+  // BASE_URL: string = 'http://localhost:3000';
+  BASE_URL: string = 'https://chuglog.herokuapp.com/';
+
 
   constructor(
     private http: Http,
